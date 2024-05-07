@@ -1,0 +1,120 @@
+location,subLocation,x,y,circleTop,clicleLeft
+Astapor,,51,73,0,0
+Astapor,Slaver's Bay,48.44,69.05,0,0
+Braavos,,22.6,29.37,0,0
+Dorne,,8.02,66.55,0,0
+Dorne,The Water Gardens,16.35,68.43,0,0
+Dorne,Tower of Joy,6.15,61.55,0,0
+Meereen,,53.65,63.74,0,0
+Meereen,Outside Meereen,53.65,63.74,0,0
+North of the Wall,Cave Outside Wildling Camp,6.27,3.44,-1,0
+North of the Wall,Craster's Keep,9.39,2.81,-1,0
+North of the Wall,Destroyed Cabin,6.27,3.44,-1,0
+North of the Wall,Fist of the First Men,7.31,0.94,-1,0
+North of the Wall,Frostfang Mountains,5.22,1.25,-1,0
+North of the Wall,Hardhome,13.14,0.31,-1,0
+North of the Wall,Near Nightfort,10.1,0,0,0
+North of the Wall,Nightswatch March South,10.1,0,0,0
+North of the Wall,Outside the Three-Eyed Raven,10.1,0,0,0
+North of the Wall,South to the Wall,10.1,0,0,0
+North of the Wall,The Haunted Forest,9.74,0.94,-1,0
+North of the Wall,The Lands of Always Winter,10.1,0,0,0
+North of the Wall,The Three-Eyed Raven,10.1,0,0,0
+North of the Wall,The Wall,10.22,5.31,-1,0
+North of the Wall,Wildling Camp,10.1,0,0,0
+North of the Wall,Wildlings March South,10.1,0,0,0
+Pentos,,22.81,47.81,0,0
+Pentos,Pentos to Volantis,28.02,57.49,0,0
+Qarth,,71.56,80.61,0,0
+Qarth,King's Landing,12.19,47.18,0,0
+Qarth,The Wall,10.1,0,0,0
+Qarth,Vaes Dothrak,65.73,43.12,0,0
+The Crownlands,Blackwater Bay,14.06,47.18,0,0
+The Crownlands,Blackwater Rush,9.06,46.87,0,0
+The Crownlands,Castle Stokeworth,12.19,45.31,0,0
+The Crownlands,Dragonstone,15.73,43.12,0,0
+The Crownlands,King's Landing,11.98,47.18,0,0
+The Crownlands,Outside King's Landing,11.98,47.18,0,0
+The Crownlands,The Kingswood,12.4,49.37,0,0
+The Dothraki Sea,,57.4,53.12,0,0
+The Dothraki Sea,Dothraki Camp,32.4,44.99,0,0
+The Dothraki Sea,Lhazareen Village,60.52,65.93,0,0
+The Iron Islands,Lordsport,0,34.99,0,0
+The Iron Islands,Pyke,0,34.99,0,0
+The Narrow Sea,,18.65,48.74,0,0
+The North,Bear Island,2.19,3.44,0,0
+The North,Deepwood Motte,3.23,7.5,0,0
+The North,Last Hearth,11.35,5,0,0
+The North,Moat Cailin,6.98,21.56,0,0
+The North,North to the Wall,9.18,1.56,-1,0
+The North,Outside Winterfell,6.68,12.19,0,0
+The North,Stannis Baratheon's Camp,6.47,15,0,0
+The North,The Dreadfort,11.89,10.31,0,0
+The North,The Gift,11.47,1.87,0,0
+The North,The Kingsroad South to King's Landing,10.22,42.49,0,0
+The North,The Neck,6.06,25.31,0,0
+The North,The Wolfswood,2.93,10.62,0,0
+The North,Winter Town,6.27,13.75,0,0
+The North,Winterfell,6.68,12.19,0,0
+The Reach,Highgarden,2.1,57.8,0,0
+The Reach,Horn Hill,2.93,59.99,0,0
+The Reach,Oldtown,3.14,63.74,0,-1
+The Reach,To Horn Hill,1.06,61.24,0,0
+The Red Waste,,68.35,66.87,0,0
+The Red Waste,The Desert,68.35,66.87,0,0
+The Riverlands,Away from the Twins,6.06,28.12,0,0
+The Riverlands,Battlefield,6.89,37.47,0,0
+The Riverlands,Camp of the North,6.89,37.47,0,0
+The Riverlands,Crossroads Inn,9.18,39.37,0,0
+The Riverlands,East to King's Landing,8.35,45.62,0,0
+The Riverlands,Forest,4.81,39.37,0,0
+The Riverlands,Harrenhal,8.77,40.62,0,0
+The Riverlands,Hollow Hill,5.43,43.74,0,0
+The Riverlands,Lannister Camp,3.56,38.12,0,0
+The Riverlands,North to the Red Fork,7.1,36.24,0,0
+The Riverlands,Outside Harrenhal,8.77,40.62,0,0
+The Riverlands,Red Fork,7.1,39.99,0,0
+The Riverlands,Riverrun,5.02,38.74,0,0
+The Riverlands,South to King's Landing,12.31,47.18,0,0
+The Riverlands,The Kingsroad,0,0,0,0
+The Riverlands,The Twins,0,0,0,0
+The Riverlands,To Harrenhal,0,0,0,0
+The Riverlands,To Riverrun,0,0,0,0
+The Riverlands,To The Eyrie,0,0,0,0
+The Riverlands,To The Twins,0,0,0,0
+The Riverlands,Village,0,0,0,0
+The Shivering Sea,,0,0,0,0
+The Stormlands,Storm's End,0,0,0,0
+The Stormlands,Tarth,0,0,0,0
+The Stormlands,The Woods,0,0,0,0
+The Summer Sea,,0,0,0,0
+The Sunset Sea,,0,0,0,0
+The Vale,Coast of the Vale,0,0,0,0
+The Vale,Eastern Road,0,0,0,0
+The Vale,Inn,0,0,0,0
+The Vale,Outside the Inn,0,0,0,0
+The Vale,Runestone,0,0,0,0
+The Vale,The Eyrie,0,0,0,0
+The Vale,To The Eyrie,0,0,0,0
+The Vale,To The Vale,0,0,0,0
+The Vale,To the Westerlands,0,0,0,0
+The Wall,Castle Black,10.36,5.31,-1,0
+The Wall,Eastwatch,0,0,0,0
+The Wall,Mole's Town,0,0,0,0
+The Wall,Nightfort,0,0,0,0
+The Wall,Outside Castle Black,0,0,0,0
+The Wall,The Gift,0,0,0,0
+The Wall,Top of the Wall,0,0,0,0
+The Westerlands,Camp of the North,0,0,0,0
+The Westerlands,Casterly Rock,0,0,0,0
+The Westerlands,Lannister Camp,0,0,0,0
+The Westerlands,Outside Casterly Rock,0,0,0,0
+The Westerlands,Oxcross,0,0,0,0
+The Westerlands,To King's Landing,0,0,0,0
+Vaes Dothrak,,0,0,0,0
+Valyria,,0,0,0,0
+Valyria,Slaver's Bay,0,0,0,0
+Volantis,,0,0,0,0
+Volantis,Volantis to Valyria,0,0,0,0
+Yunkai,,0,0,0,0
+Yunkai,Outside Yunkai,0,0,0,0
