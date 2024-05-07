@@ -1,0 +1,162 @@
+<div class="grid-pad">
+  <div class="col-1-3">
+    <div class="content">
+    <h2 style="font-family: 'Game of Thrones';">The Seven Kingdoms</h2>
+
+    <h4>Select Episode</h4>
+
+    <div class="grid-pad">
+      <div class="col-1-2">
+        <div class="content">
+          <mat-form-field>
+            <mat-label>Season Number</mat-label>
+            <mat-select [formControl]="temporada" (selectionChange)="onSeasonChange($event)" #selectSeason>
+              <mat-select-trigger>
+                {{ temporada.value || '' }}
+              </mat-select-trigger>
+              <mat-option *ngFor="let temp of temporadaList" [value]="temp">{{ temp }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>            
+      </div>
+      <div class="col-1-2">
+        <div class="content">
+          <mat-form-field class="ml10">
+            <mat-label>Episode Number</mat-label>
+            <mat-select [formControl]="episodio" (selectionChange)="onEpisodeChange($event)" #selectEpisode>
+              <mat-select-trigger>
+                {{ episodio.value  || ''}}
+              </mat-select-trigger>
+              <mat-option *ngFor="let ep of episodesList" [value]="ep">{{ ep }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>            
+      </div>
+    </div>            
+
+    <div>
+      <textarea class="" style="width: 100%; resize: none;" id="description" rows="12"
+        [innerHTML]="currentDescription" readonly disabled>
+      </textarea>
+    </div>
+
+    <div class="grid-pad">
+      <h4>Select Scene</h4>
+      <div class="col-1-2">
+        <div class="content">
+          <app-scene-selector
+            [sceneData]="sceneSegments"
+            (sceneSearch)="onSceneSearch($event)"
+            (sceneSearchChange)="onSceneSearchChange($event)"
+            (sceneSearchEnd)="onSceneSearchEnd($event)"
+            (sceneSelect)="onSceneSelect($event)"
+          ></app-scene-selector>
+        </div>
+      </div>
+      <div class="col-1-2">
+        <div class="content">
+          <div>
+            <textarea class="" style="width: 100%; resize: none;" id="description" rows="20"
+              [(ngModel)]="debugText" readonly disabled>
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+  <!-- MAP -->
+  <div class="col-1-3">
+    <div class="content">
+    <div [style.grid-area]="'content'">
+      <div class="no-margin" style="display: flex;">
+        <div class="no-margin container">
+          <div class="no-margin image-wrapper" #wrapper>
+            <div class="no-margin image-container">
+              <img src="assets/selvag_map.jpg" alt="Imagem" #image (mousemove)="zoomImage($event)"
+                [ngStyle]="{ 'width': zoomWH }" >
+              <div class="square-overlay" [ngStyle]="squareStyle"></div>
+              <div class="no-margin zoom-window" #zoom 
+                style="margin-top: 4px;"
+                [ngStyle]="{ 'background-image': 'url(' + 'assets/selvag_map.jpg' + ')', 'background-size': zoomSize, 'width': zoomWH, 'height': zoomWH, 'position': 'relative' }" >
+                <div class="circle" [ngStyle]="circleStyle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <mat-icon>
+            <span class="material-symbols-outlined" (click)="toggleMapDebug()">bug_report</span>
+          </mat-icon>
+          <div *ngIf="debugMap">
+            <mat-icon>
+              <span class="material-symbols-outlined" (click)="circleMove(0,0)">filter_center_focus</span>
+            </mat-icon>
+            <mat-icon>
+              <span class="material-symbols-outlined" (click)="circleMove(-1,0)">arrow_circle_up</span>
+            </mat-icon>
+            <mat-icon>
+              <span class="material-symbols-outlined" (click)="circleMove(1,0)">arrow_circle_down</span>
+            </mat-icon>
+            <mat-icon>
+              <span class="material-symbols-outlined" (click)="circleMove(0,-1)">arrow_circle_left</span>
+            </mat-icon>
+            <mat-icon>
+              <span class="material-symbols-outlined" (click)="circleMove(0,1)">arrow_circle_right</span>
+            </mat-icon>
+            xPercent: {{xPercent}}
+            yPercent: {{yPercent}}
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="col-1-3">
+    <div class="content">
+    <!-- CHARACTERS -->
+
+    <section>
+      <div class="example-button-row">
+        <h4 *ngIf="currentCharIdx>0">Characters on Scene ({{currentCharIdx-charsPerPage>=0 ? currentCharIdx-charsPerPage+1 : 1}}..{{currentCharIdx}}/{{allCharBio.length}})</h4>
+        <h4 *ngIf="currentCharIdx==0">No Characters Found</h4>
+        <div *ngIf="currentCharIdx>0">
+          <button mat-icon-button color="secondary" (click)="previousChars($event)" aria-label="previews characters">
+            <mat-icon>
+              <span class="material-symbols-outlined">arrow_back</span>
+            </mat-icon>
+          </button>
+          <button mat-icon-button color="secondary" (click)="nextChars($event)" aria-label="next characters">
+            <mat-icon>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </mat-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <ng-container *ngFor="let char of charBio; let i=index">
+      <div *ngIf="i % 3 === 0" class="row">
+        <ng-container *ngFor="let char of charBio.slice(i, i + 3)">
+          <div class="column">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <mat-card-title>{{ char.name }}</mat-card-title>
+                <mat-card-subtitle>{{ char.house }}</mat-card-subtitle>
+              </mat-card-header>
+              <div class="image">
+                <img *ngIf="char.img;" [src]="char.img" alt="{{ char.name }}" >
+                <img *ngIf="!char.img;" mat-card-image src="assets/placeholder.jpg" alt="{{ char.name }}" >
+              </div>
+            </mat-card>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+    
+    </div>
+  </div>
+</div>

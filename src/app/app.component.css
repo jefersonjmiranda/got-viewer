@@ -1,0 +1,100 @@
+fieldset {
+  border: 1px solid #ccc; /* Adiciona uma borda */
+  border-radius: 10px; /* Define o raio dos cantos */
+  padding: 20px; /* Adiciona espaço interno */
+}
+
+div {
+  margin: 10px;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+/* Estilo para os segmentos de tempo */
+.time-segments {
+  display: flex;
+  width: 100%;
+  height: 20px; /* Ajuste a altura conforme necessário */
+  margin-top: 10px; /* Adicione margem superior conforme necessário */
+}
+
+.segment {
+  height: 100%;
+}
+
+.segment-0 {
+  background-color: transparent;
+}
+
+.segment-1 {
+  background-color: #FFA07A;
+}
+
+.segment-2 {
+  background-color: #87CEEB;
+}
+
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+/* .enlarge-over:hover {
+  width: 10%;
+}
+
+.enlarge-over:hover ~ .elemento {
+  width: 5%;
+} */
+
+.highlighted-div {
+  outline: 2px solid #8B0000;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  width: 200px;
+  height: auto;
+}
+
+.image-caption {
+  text-align: center;
+}
+
+/* MAP */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.image-container {
+  margin-right: 0px;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.zoom-window {
+  width: 800px;
+  border: 1px solid black;
+  background-repeat: no-repeat;
+}
