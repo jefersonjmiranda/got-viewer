@@ -791,6 +791,9 @@ class CharacterComponent {
     if (charData['guardianOf']) {
       this.addBubble('Guardian Of', charData['guardianOf']);
     }
+    if (charData['guardianOf']) {
+      this.addBubble('Guardian Of', charData['guardianOf']);
+    }
     if (charData['guardedBy']) {
       this.addBubble('Guarded By', charData['guardedBy']);
     }
@@ -1545,7 +1548,7 @@ class MainComponent {
     template: function MainComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "h2", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](4, "The Seven Kingdoms");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](4, "Game of Thrones Viewer");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "h4");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, "Select Episode");

@@ -595,6 +595,9 @@ export class CharacterComponent implements OnInit, AfterViewInit {
     if (charData['guardianOf']) {
       this.addBubble('Guardian Of', charData['guardianOf']);
     }
+    if (charData['guardianOf']) {
+      this.addBubble('Guardian Of', charData['guardianOf']);
+    }
     if (charData['guardedBy']) {
       this.addBubble('Guarded By', charData['guardedBy']);
     }
