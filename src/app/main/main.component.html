@@ -142,7 +142,7 @@
       <div *ngIf="i % 3 === 0" class="row">
         <ng-container *ngFor="let char of charBio.slice(i, i + 3)">
           <div class="column">
-            <mat-card class="example-card">
+            <mat-card class="example-card" style="width: 190px;">
               <mat-card-header>
                 <mat-card-title>{{ char.name }}</mat-card-title>
                 <mat-card-subtitle>{{ char.house }}</mat-card-subtitle>

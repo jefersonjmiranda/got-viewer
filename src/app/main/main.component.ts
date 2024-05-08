@@ -121,7 +121,6 @@ export class MainComponent implements OnInit, AfterViewInit {
     this.episodesList = this.episodesListList[this.selectedSeason-1];
     this.selectEpisode.value = this.episodesList[0];
     this.selectEpisodeData();
-    this.locateOnMap();
   }
 
   pad(value: number): string {
@@ -155,6 +154,7 @@ export class MainComponent implements OnInit, AfterViewInit {
     this.debugChoice(0);
     this.clickSelected = 1;
     this.findCharacters();
+    this.locateOnMap();
   }
 
   calcSceneSegments() {
@@ -396,8 +396,6 @@ export class MainComponent implements OnInit, AfterViewInit {
 
     console.debug(zoomWindow.style);
     console.debug(this.squareStyle);
-
-    // this.locateOnMap();
   }
 
   locateOnMap() {
