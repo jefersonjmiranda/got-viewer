@@ -628,6 +628,7 @@ class CharacterComponent {
     if (color) {
       node['color'] = color;
     }
+    console.log('NODE', node);
     this.familyNodes.push(node);
     if (charData['parents']) {
       charData['parents'].forEach(parent => {
@@ -651,6 +652,14 @@ class CharacterComponent {
           name: son_daughter,
           image: sd ? sd['characterImageThumb'] : 'assets/placeholder.jpg'
         });
+      });
+    } else {
+      this.familyData.push([charData['characterName'], '---']);
+      this.familyNodes.push({
+        id: '---',
+        title: '---',
+        name: '---',
+        image: 'assets/placeholder.jpg'
       });
     }
   }

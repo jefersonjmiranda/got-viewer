@@ -415,6 +415,7 @@ export class CharacterComponent implements OnInit, AfterViewInit {
     if (color) {
       node['color'] = color;
     }
+    console.log('NODE', node)
     this.familyNodes.push(node);
     if (charData['parents']) {
       charData['parents'].forEach(parent => {
@@ -443,6 +444,16 @@ export class CharacterComponent implements OnInit, AfterViewInit {
           image: sd ? sd['characterImageThumb'] : 'assets/placeholder.jpg'
         });
       });     
+    } else {
+      this.familyData.push(
+        [charData['characterName'], '---']
+      );
+      this.familyNodes.push({
+        id: '---',
+        title: '---',
+        name: '---',
+        image: 'assets/placeholder.jpg'
+      });
     }
   }
 
