@@ -1288,7 +1288,6 @@ class MainComponent {
     this.episodesList = this.episodesListList[this.selectedSeason - 1];
     this.selectEpisode.value = this.episodesList[0];
     this.selectEpisodeData();
-    this.locateOnMap();
   }
   pad(value) {
     return value < 10 ? `0${value}` : `${value}`;
@@ -1314,6 +1313,7 @@ class MainComponent {
     this.debugChoice(0);
     this.clickSelected = 1;
     this.findCharacters();
+    this.locateOnMap();
   }
   calcSceneSegments() {
     const segs = [];
@@ -1492,9 +1492,7 @@ class MainComponent {
     };
     console.debug(zoomWindow.style);
     console.debug(this.squareStyle);
-    // this.locateOnMap();
   }
-
   locateOnMap() {
     const loc = this.locationsData.find(l => l['location'] == this.sceneData.location && l['subLocation'] == this.sceneData.sublocation);
     if (!loc) {
@@ -1544,7 +1542,7 @@ class MainComponent {
     },
     decls: 70,
     vars: 27,
-    consts: [[1, "grid-pad"], [1, "col-1-3"], [1, "content"], [2, "font-family", "'Game of Thrones'"], [1, "col-1-2"], [3, "formControl", "selectionChange"], ["selectSeason", ""], [3, "value", 4, "ngFor", "ngForOf"], [1, "ml10"], ["selectEpisode", ""], ["id", "description", "rows", "12", "readonly", "", "disabled", "", 1, "", 2, "width", "100%", "resize", "none", 3, "innerHTML"], [3, "sceneData", "sceneSearch", "sceneSearchChange", "sceneSearchEnd", "sceneSelect"], ["id", "description", "rows", "20", "readonly", "", "disabled", "", 1, "", 2, "width", "100%", "resize", "none", 3, "ngModel", "ngModelChange"], [1, "no-margin", 2, "display", "flex"], [1, "no-margin", "container"], [1, "no-margin", "image-wrapper"], ["wrapper", ""], [1, "no-margin", "image-container"], ["src", "assets/selvag_map.jpg", "alt", "Imagem", 3, "ngStyle", "mousemove"], ["image", ""], [1, "square-overlay", 3, "ngStyle"], [1, "no-margin", "zoom-window", 2, "margin-top", "4px", 3, "ngStyle"], ["zoom", ""], [1, "circle", 3, "ngStyle"], [1, "material-symbols-outlined", 3, "click"], [4, "ngIf"], [1, "example-button-row"], [4, "ngFor", "ngForOf"], [3, "value"], ["mat-icon-button", "", "color", "secondary", "aria-label", "previews characters", 3, "click"], [1, "material-symbols-outlined"], ["mat-icon-button", "", "color", "secondary", "aria-label", "next characters", 3, "click"], ["class", "row", 4, "ngIf"], [1, "row"], [1, "column"], [1, "example-card"], [1, "image"], [3, "src", "alt", 4, "ngIf"], ["mat-card-image", "", "src", "assets/placeholder.jpg", 3, "alt", 4, "ngIf"], [3, "src", "alt"], ["mat-card-image", "", "src", "assets/placeholder.jpg", 3, "alt"]],
+    consts: [[1, "grid-pad"], [1, "col-1-3"], [1, "content"], [2, "font-family", "'Game of Thrones'"], [1, "col-1-2"], [3, "formControl", "selectionChange"], ["selectSeason", ""], [3, "value", 4, "ngFor", "ngForOf"], [1, "ml10"], ["selectEpisode", ""], ["id", "description", "rows", "12", "readonly", "", "disabled", "", 1, "", 2, "width", "100%", "resize", "none", 3, "innerHTML"], [3, "sceneData", "sceneSearch", "sceneSearchChange", "sceneSearchEnd", "sceneSelect"], ["id", "description", "rows", "20", "readonly", "", "disabled", "", 1, "", 2, "width", "100%", "resize", "none", 3, "ngModel", "ngModelChange"], [1, "no-margin", 2, "display", "flex"], [1, "no-margin", "container"], [1, "no-margin", "image-wrapper"], ["wrapper", ""], [1, "no-margin", "image-container"], ["src", "assets/selvag_map.jpg", "alt", "Imagem", 3, "ngStyle", "mousemove"], ["image", ""], [1, "square-overlay", 3, "ngStyle"], [1, "no-margin", "zoom-window", 2, "margin-top", "4px", 3, "ngStyle"], ["zoom", ""], [1, "circle", 3, "ngStyle"], [1, "material-symbols-outlined", 3, "click"], [4, "ngIf"], [1, "example-button-row"], [4, "ngFor", "ngForOf"], [3, "value"], ["mat-icon-button", "", "color", "secondary", "aria-label", "previews characters", 3, "click"], [1, "material-symbols-outlined"], ["mat-icon-button", "", "color", "secondary", "aria-label", "next characters", 3, "click"], ["class", "row", 4, "ngIf"], [1, "row"], [1, "column"], [1, "example-card", 2, "width", "190px"], [1, "image"], [3, "src", "alt", 4, "ngIf"], ["mat-card-image", "", "src", "assets/placeholder.jpg", 3, "alt", 4, "ngIf"], [3, "src", "alt"], ["mat-card-image", "", "src", "assets/placeholder.jpg", 3, "alt"]],
     template: function MainComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "h2", 3);
