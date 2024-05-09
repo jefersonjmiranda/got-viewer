@@ -509,6 +509,46 @@ class CharacterComponent {
     }
     this.selectCharacter(charGraphData);
   }
+  onFamilyCharacterClick(event) {
+    console.log(event, event.point.id);
+    let charGraphData;
+    if (event.point.id) {
+      charGraphData = this.nameSeries.find(char => char.name == event.point.id);
+      if (charGraphData) {
+        this.selectCharacter(charGraphData);
+      } else {
+        charGraphData = this.noNameSeries.find(char => char.name == event.point.id);
+        if (charGraphData) {
+          this.selectCharacter(charGraphData);
+        }
+      }
+    }
+  }
+  onBubbleCharacterClick(event) {
+    const name = event.point.name;
+    console.log(name);
+    if (!this.selectFromNameSeries(name)) {
+      this.selectFromNoNameSeries(name);
+    }
+  }
+  selectFromNameSeries(name) {
+    const charGraphData = this.nameSeries.find(char => char.name == name);
+    console.log(charGraphData);
+    if (charGraphData) {
+      this.selectCharacter(charGraphData);
+      return true;
+    }
+    return false;
+  }
+  selectFromNoNameSeries(name) {
+    const charGraphData = this.noNameSeries.find(char => char.name == name);
+    console.log(charGraphData);
+    if (charGraphData) {
+      this.selectCharacter(charGraphData);
+      return true;
+    }
+    return false;
+  }
   selectCharacter(charGraphData) {
     this.charData = this.globalData.characters.find(c => c['characterName'] == charGraphData['name']);
     const eps = this.globalData.episodes;
@@ -689,6 +729,16 @@ class CharacterComponent {
         inverted: true,
         backgroundColor: '#DCDCDC'
       },
+      plotOptions: {
+        series: {
+          cursor: 'pointer',
+          events: {
+            click: function (event) {
+              this.onFamilyCharacterClick(event);
+            }.bind(this)
+          }
+        }
+      },
       title: {
         text: 'Family Tree'
       },
@@ -767,6 +817,14 @@ class CharacterComponent {
               fontWeight: 'normal'
             }
           }
+        },
+        series: {
+          cursor: 'pointer',
+          events: {
+            click: function (event) {
+              this.onBubbleCharacterClick(event);
+            }.bind(this)
+          }
         }
       },
       series: this.bubbleSeries
@@ -787,9 +845,6 @@ class CharacterComponent {
     }
     if (charData['serves']) {
       this.addBubble('Serves', charData['serves']);
-    }
-    if (charData['guardianOf']) {
-      this.addBubble('Guardian Of', charData['guardianOf']);
     }
     if (charData['guardianOf']) {
       this.addBubble('Guardian Of', charData['guardianOf']);
