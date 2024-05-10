@@ -19,11 +19,18 @@ $ npm run start
 
 # Open in browser: http://localhost:4200
 ```
+
+## Precompiled App
+
+If you are unfamiliar with Angular you can view the App at: https://jefersonjmiranda.github.io/got-viewer
+<br>
+Or serve the precompiled <i>docs</i> folder on your local machine.
+
 ## License
 
 MIT License
 
-Copyright (c) 2024 Wilfried Lucha
+Copyright (c) 2024 Jeferson Jose de Miranda
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
